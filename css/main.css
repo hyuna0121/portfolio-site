@@ -393,7 +393,7 @@ header nav ul li a:hover::after {
 
 
 /* MODAL */
-#modal {
+#modal, #imageModal {
   /* Quiz : 화면(뷰포트) 전체 영역 덮기 */
   position: fixed;
   top: 0;
@@ -421,7 +421,13 @@ header nav ul li a:hover::after {
   width: 60%;
 }
 
-#modal .modal-header {
+#imageModal .modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#modal .modal-header,
+#imageModal .modal-header {
   padding: 16px;
   background-color: #222;
   color: #fff;
@@ -432,16 +438,19 @@ header nav ul li a:hover::after {
   align-items: center;
 }
 
-#modal .modal-header .btn-close {
+#modal .modal-header .btn-close,
+#imageModal .modal-header .btn-close {
   font-size: 30px;
   cursor: pointer;
 }
 
-#modal .modal-header .btn-close:hover {
+#modal .modal-header .btn-close:hover,
+#imageModal .modal-header .btn-close:hover {
   color: #aaa;
 }
 
-#modal .modal-body {
+#modal .modal-body,
+#imageModal .modal-body {
   padding: 16px;
 }
 

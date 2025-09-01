@@ -39,16 +39,34 @@ const swiper = new Swiper('.project .swiper', {
 
 // 모달창 띄우기
 const modal = document.querySelector('#modal');
-const modalBtn = document.querySelector('.project .btn-modal');
+const modalBtnList = document.querySelectorAll('.project .btn-modal');
 const closeBtn = document.querySelector('#modal .btn-close');
 
+const imageModal = document.querySelector('#imageModal');
+const imageModalBtnList = document.querySelectorAll('.project .btn-modal-image');
+const imageCloseBtn = document.querySelector('#imageModal .btn-close');
+const imageEl = document.querySelector('#imageModal img');
+
 // Quiz : modalBtn 누르면 모달창이 뜨고 closeBtn 누르면 닫히도록 만들기
-modalBtn.addEventListener('click', function () {
-  // modal.style.display = 'flex';
-  modal.classList.add('show');
+modalBtnList.forEach(function (modalBtn) {
+  modalBtn.addEventListener('click', function () {
+    modal.style.display = 'flex';
+    // modal.classList.add('show');
+  });
 });
 
 closeBtn.addEventListener('click', function () {
-  // modal.style.display = 'none';
-  modal.classList.remove('show');
+  modal.style.display = 'none';
+  // modal.classList.remove('show');
+});
+
+imageModalBtnList.forEach(function (imageModalBtn) {
+  imageModalBtn.addEventListener('click', function () {
+    imageEl.src = imageModalBtn.dataset.imageSrc;
+    imageModal.style.display = 'flex';
+  });
+});
+
+imageCloseBtn.addEventListener('click', function () {
+  imageModal.style.display = 'none';
 });
