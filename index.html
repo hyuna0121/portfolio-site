@@ -28,6 +28,15 @@
   <!-- 그 외 fontawesome, bootstrap icon 등 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
+  <!-- Swiper CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!-- ScrollMagic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -211,6 +220,20 @@
       <div class="port">
         <div class="port__img">
           <!-- 슬라이드 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/work_1.jpg" alt="산출물1">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/work_2.jpg" alt="산출물2">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
         <div class="port__text">
           <h3>프로젝트 명</h3>
@@ -220,13 +243,15 @@
             <li><span>GitHub : </span>깃허브 주소</li>
             <li><span>URL : </span>배포 주소</li>
           </ul>
-          <button class="btn-group">
+          <div class="btn-group">
             <a href="javascript:void(0)" class="btn">README</a>
-            <a href="javascript:void(0)" class="btn">이미지</a>
-          </button>
+            <a href="javascript:void(0)" class="btn btn--brown">이미지</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- MODAL -->
 </body>
 </html>
