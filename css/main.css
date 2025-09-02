@@ -451,6 +451,18 @@ header nav ul li a:hover::after {
   width: 30px;
 }
 
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  color: #fff;
+}
+footer .copyright {
+  text-align: center;
+  font-weight: 600;
+  line-height: 200px;
+}
+
 /* MODAL */
 #modal, #imageModal {
   /* Quiz : 화면(뷰포트) 전체 영역 덮기 */

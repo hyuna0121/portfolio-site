@@ -94,3 +94,9 @@ document.addEventListener('keydown', function (e) {
     imageModal.style.display = 'none';
   }
 });
+
+// 현재 연도 표시
+// 날짜 정보를 가진 JS의 Date 객체를 활용
+console.log(new Date().getFullYear());
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
