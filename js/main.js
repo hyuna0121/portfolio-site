@@ -70,3 +70,27 @@ imageModalBtnList.forEach(function (imageModalBtn) {
 imageCloseBtn.addEventListener('click', function () {
   imageModal.style.display = 'none';
 });
+
+// 모달 바깥 영역 클릭 시 닫기
+modal.addEventListener('click', function (e) { // e : 이벤트 발생 시 이벤트 객체가 전달됨
+  console.log(e.target); // 현재 이벤트가 발생한 대상(사용자가 실제 클릭한 가장 안쪽 요소)
+  console.log(e.currentTarget); // 이벤트가 바인딩된 요소(여기선 modal), this와 동일
+
+  if (e.target === e.currentTarget) { // 이벤트 리스너가 붙은 요소 그 자체를 클릭한 경우만 실행
+    modal.style.display = 'none';
+  }
+});
+
+imageModal.addEventListener('click', function(e) {
+  if (e.target === e.currentTarget) {
+    imageModal.style.display = 'none';
+  }
+});
+
+// ESC 키로 닫기
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    modal.style.display = 'none';
+    imageModal.style.display = 'none';
+  }
+});

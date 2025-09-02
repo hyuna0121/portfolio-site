@@ -68,6 +68,13 @@ img {
   text-align: center;
   cursor: pointer;
   transition: 0.5s;
+
+  /* (참고) 커서 모양 커스텀 가능 */
+  /* 핫스팟 위치(커서의 클릭 지점): 보통 이미지를 클릭할 위치가 커서의 왼쪽 위에 오도록 설정됨
+    예를 들어, 이미지 크기가 32px x 32px이라면 (16, 16)으로 설정하면 이미지의 중심이 클릭되는 부분이 됨 */
+  /* auto: 기본 커서 모양을 fallback으로 지정. 이미지가 로딩되지 않거나 설정이 안 되면 기본 커서가 사용됨 */
+  cursor: url("https://blog.kakaocdn.net/dn/BQXpN/btq3qNR67Lg/8tx8tGzkOcr5BuX5dyIaKk/img.png") 58 58, auto;
+  /* cursor: url("../images/byungari.png") 60 80, auto; */
 }
 .btn:hover {
   background-color: #333;
