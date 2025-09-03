@@ -151,3 +151,9 @@ menuItems.forEach(function (menuItem) {
     navEl.classList.remove('active');
   });
 });
+// 일반 for문 사용
+// for (let i = 0; i < menuItems.length; i++) {
+//   menuItems[i].addEventListener('click', function () {
+//     navEl.classList.remove('active');
+//   });
+// }
